@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 $primaryColor : #e50914;
 
 // base style ---------------
@@ -8,7 +10,7 @@ $primaryColor : #e50914;
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing : antialiased;
   background: #000;
   color: #999999;
@@ -25,17 +27,88 @@ h1,h2,h3,h4{
 }
 p{
   margin: 0.5rem;
+  color: #fff;
 }
 img{
   width: 100%;
 }
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
 
 // end base style
-
+@import '_utility';
 // showcase
 .showcase{
   width: 100%;
-  height: 100vh;
+  height: 650px;
   position: relative;
-  background: url('/netflix/img/background.jpg');
+  background: url('../img/background.jpg') no-repeat center center/cover;
+  &::before{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.50);
+    width: 100%;
+    height: 100%;
+    // penting ! box shadow untuk dapat efek blur di sisi kiri dan kanan
+    box-shadow: inset 120px 100px 250px #000000,inset -120px -100px 250px #000000 ;
+  }
+}
+.showcase__top{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  align-items: center;
+  position: relative;
+  img{
+    width: 130px;
+  }
+}
+.showcase__content{
+  text-align: center;
+  display: flex;
+  position: relative;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem;
+  max-width: 800px;
+  .bold{
+    background: black;
+    padding:5px;
+  }
+  h1{
+    text-shadow: 0 3px 0 rgba(0,0,0,0.50);
+    font-size: 2.8rem;
+  }
+  p{
+    font-size: 1.2rem;
+  }
+  
+  .input-email{
+    padding: 1.3rem 2.1rem;
+    border: none;
+    width: 600px;
+  }
+}
+
+.form{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  .fa-chevron-right{
+    position: relative;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+  }
+  .btn{
+    &:hover{
+      .fa-chevron-right{
+        transform: translate(0.5rem) scale(1.2);
+      }
+    }
+  }
 }
