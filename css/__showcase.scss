@@ -1,0 +1,15 @@
+.showcase{
+  width: 100%;
+  height: 650px;
+  position: relative;
+  background: url('../img/background.jpg') no-repeat center center/cover;
+  &::before{
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,0.50);
+    width: 100%;
+    height: 100%;
+    // penting ! box shadow untuk dapat efek blur di sisi kiri dan kanan
+    box-shadow: inset 120px 100px 250px #000000,inset -120px -100px 250px #000000 ;
+  }
+}

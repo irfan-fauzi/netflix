@@ -1,0 +1,43 @@
+// start tabs --------------------------
+.tab-container{
+  padding: 0 2rem;
+  overflow: hidden;
+  max-width: 70%;
+  margin: auto;
+}
+.tabs{
+  background-color: $darkColor;
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
+  .tab-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    text-align: center;
+    
+    &>div{
+     padding : 1.5rem 0;
+     transition: 0.3s;
+    cursor: pointer;
+     &:hover{
+       color: #fff;
+      p{
+        color: #fff;
+      }
+     }
+    }
+  }
+
+  p{
+    padding-top: 0.5rem;
+    color: #999999;
+    transition: 0.3s;
+  }
+  
+}
+.tab-border{  
+  
+  border-bottom: red solid 3px;
+}
+
+// end tabs ----------------------------

@@ -1,0 +1,23 @@
+.form{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  .fas{
+    position: relative;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+  }
+  .btn{
+    &:hover{
+      .fas{
+        transform: translate(0.5rem) scale(1.5);
+      }
+    }
+  }
+}
+.input-email{
+  padding: 1.3rem 2.1rem;
+  border: none;
+  width: 600px;
+}

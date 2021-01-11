@@ -1,0 +1,30 @@
+// tab content
+.tab-content{
+  padding: 3rem 0;
+  background: #000000;
+  #tab-1-content{
+    .tab-1-content-inner{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-items: center;
+     justify-content: center;
+    }
+    
+  }
+  #tab-2-content{
+    .tab-2-content-top{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+    .tab-2-content-bottom{
+      margin-top: 2rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
