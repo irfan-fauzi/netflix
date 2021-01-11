@@ -1,0 +1,31 @@
+footer{
+  max-width: 1000px;
+  margin: 1rem auto;
+  padding: 1rem;
+  overflow: auto;
+  
+  p{
+    margin: 0;
+    color: #9999;
+  }
+  a{
+    color: #9999;
+    font-size: 0.9rem;
+  }
+  li{
+    line-height: 1.9;
+  }
+  .footer-cols{
+    //border: red solid 1px;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+   
+  }
+ 
+}
